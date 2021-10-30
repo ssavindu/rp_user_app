@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:busfinder_user/src/screens/search_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Find My Bus',
-      home: LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/search': (context) => SearchPage()
+      },
       theme: ThemeData.dark(),
     );
   }
@@ -75,7 +80,9 @@ class _LoginPageState extends State<LoginPage> {
                     style: ElevatedButton.styleFrom(
                         textStyle: const TextStyle(fontSize: 20),
                         primary: Colors.green[800]),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/search');
+                    },
                     child: Text(
                       'Login',
                     ),
