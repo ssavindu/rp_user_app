@@ -1,9 +1,10 @@
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class AvailableBusListPage extends StatefulWidget {
-  const AvailableBusListPage({ Key? key }) : super(key: key);
+  const AvailableBusListPage({Key? key}) : super(key: key);
 
   @override
   _AvailableBusListPageState createState() => _AvailableBusListPageState();
@@ -17,7 +18,7 @@ class _AvailableBusListPageState extends State<AvailableBusListPage> {
         title: Text("Travel Partner"),
       ),
       body: SafeArea(
-        child:Column(
+        child: Column(
           children: <Widget>[
             Text("Next available busses for your destination"),
           ],
