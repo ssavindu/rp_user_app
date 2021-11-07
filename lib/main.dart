@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:busfinder_user/src/screens/availableBusList.dart';
 import 'package:busfinder_user/src/screens/search_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +16,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginPage(),
-        '/search': (context) => SearchPage()
+        '/search': (context) => SearchPage(),
+        '/track':(context) =>AvailableBusListPage(),
       },
+     // home: AvailableBusListPage(),
       theme: ThemeData.dark(),
     );
   }
