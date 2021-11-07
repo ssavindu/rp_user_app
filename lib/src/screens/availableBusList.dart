@@ -118,7 +118,7 @@ class _AvailableBusListPageState extends State<AvailableBusListPage> {
                         child: const Text(
                           "Track",
                           style: TextStyle(
-                            fontSize: 16
+                            fontSize: 18
                           ),
                         ),
                         style: ButtonStyle(
