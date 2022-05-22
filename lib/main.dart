@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+import 'package:busfinder_user/src/screens/map.dart';
 import 'package:flutter/material.dart';
 import 'package:busfinder_user/src/screens/login.dart';
 import 'package:busfinder_user/src/screens/availableBusList.dart';
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Find My Bus',
       initialRoute: '/',
       routes: {
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/search': (context) => SearchPage(),
         '/track': (context) => AvailableBusListPage(),
         '/signup': (context) => SignupPage(),
+        '/map': (context) => MapScreen(),
       },
       // home: AvailableBusListPage(),
       theme: ThemeData.dark(),
